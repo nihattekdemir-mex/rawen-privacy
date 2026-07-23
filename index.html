@@ -51,7 +51,7 @@
 <div class="wrap">
 
   <h1>Gizlilik Politikası</h1>
-  <p class="updated">Son güncelleme: 10 Temmuz 2026</p>
+  <p class="updated">Son güncelleme: 23 Temmuz 2026</p>
 
   <div class="intro">
     <p style="margin:0">Rawen, yalnız yaşayan insanların güvenliği için tasarlanmış bir
@@ -69,8 +69,12 @@
       yakınlarınızla eşleştirmek için (eşleşme yalnızca telefon numarasıyla yapılır).</td></tr>
     <tr><td><strong>Acil durum kişileri</strong></td><td>Kaydettiğiniz kişilerin adı ve telefon
       numarası — yalnızca acil durumda onlara haber verebilmek için.</td></tr>
-    <tr><td><strong>Konum (GPS)</strong></td><td>Yalnızca bir acil durum tetiklendiğinde veya
-      Outdoor (doğa) modunda rota kaydı için alınır. Sürekli konum takibi yapılmaz.</td></tr>
+    <tr><td><strong>Konum (GPS)</strong></td><td><strong>(a)</strong> Koruma açıkken
+      <strong>son bilinen konumunuz</strong> sunucuda saklanır ve en fazla 10 dakikada bir
+      güncellenir — telefonunuz kapanır, şarjı biter veya kırılırsa yakınlarınıza sizi nerede
+      arayacaklarını söyleyebilmek için. <strong>(b)</strong> Acil durumda anlık konumunuz alınır
+      ve 30 dakika boyunca 2 dakikada bir güncellenir. <strong>(c)</strong> Outdoor (doğa) modunu
+      siz açarsanız rotanız kaydedilir. Ayrıntılar için 6. bölüme bakın.</td></tr>
     <tr><td><strong>Sağlık verileri</strong> (isteğe bağlı)</td><td>Bir akıllı saat
       bağladığınızda nabız, oksijen ve adım verisi — yalnızca kritik durumları algılayıp sizi
       uyarmak için. Bu özellik tamamen isteğe bağlıdır.</td></tr>
@@ -99,14 +103,22 @@
   <p>Kişisel verileriniz yalnızca aşağıdaki durumlarda paylaşılır:</p>
   <ul>
     <li><strong>Acil durum anında:</strong> Adınız, konumunuz ve (paylaştıysanız) tıbbi
-      bilgileriniz, <strong>yalnızca sizin kaydettiğiniz acil durum kişilerine</strong> SMS ve
-      uygulama içi bildirim yoluyla iletilir.</li>
+      bilgileriniz, <strong>yalnızca sizin kaydettiğiniz acil durum kişilerine</strong> anlık
+      bildirim (push) ve uygulama içi bildirim yoluyla iletilir. SMS kanalı ileride
+      eklenebilir; eklendiğinde bu sayfada belirtilecektir.</li>
+    <li><strong>Koruduğunuz kişiler:</strong> Birinin acil durum kişisi olmayı kabul ettiyseniz,
+      o kişinin koruma durumu, kendisinden en son ne zaman bilgi geldiği ve telefonunun pil
+      seviyesi size gösterilir. Sağlık izlemeyi açtıysa nabız/adım verisi de görünür. Aynısı
+      tersi için de geçerlidir: sizi ekleyen kişiler sizin bu bilgilerinizi görür.</li>
+    <li><strong>Uygulama içi mesajlaşma:</strong> Gönderdiğiniz mesajlar yalnızca sohbetin iki
+      katılımcısı tarafından okunabilir.</li>
     <li><strong>Altyapı sağlayıcıları:</strong> Verileriniz, hizmeti çalıştırmak için kullandığımız
       güvenilir sağlayıcılarda işlenir:
       <ul>
         <li><strong>Google Firebase</strong> — hesap, veri saklama ve bildirim altyapısı.</li>
-        <li><strong>Twilio</strong> — acil durum SMS'lerinin gönderimi (yalnızca ilgili telefon
-          numarası ve mesaj iletilir).</li>
+        <li><strong>Twilio</strong> — acil durum SMS'i gönderimi. Bu kanal şu an
+          <strong>kullanılmamaktadır</strong>; etkinleştirilirse yalnızca ilgili telefon numarası
+          ve mesaj iletilir ve bu sayfada belirtilir.</li>
       </ul>
       Bu sağlayıcılar verileri yalnızca bize hizmet sunmak için işler; kendi amaçları için kullanamaz.</li>
   </ul>
@@ -129,8 +141,28 @@
 
   <h2>6. İzinler Neden Gerekli</h2>
   <ul>
-    <li><strong>Konum:</strong> Acil durumda konumunuzu yakınlarınıza gönderebilmek için. Yalnızca
-      acil durumda ve Outdoor modunda kullanılır.</li>
+    <li><strong>Konum ("Her Zaman" erişimi):</strong> Rawen konum iznini <strong>iki ayrı iş</strong>
+      için kullanır; ikisini de açıkça anlatmak istiyoruz.
+      <ul>
+        <li><strong>Nerede olduğunuzu bildirmek.</strong> Koruma açıkken son bilinen konumunuz
+          sunucuda saklanır ve en fazla 10 dakikada bir güncellenir. Tek sebebi şu: telefonunuz
+          kapanır, şarjı biter veya kırılırsa Rawen yine de yakınlarınıza sizi nerede arayacaklarını
+          söyleyebilmelidir.</li>
+        <li><strong>Uygulamanın uyutulmasını engellemek.</strong> iPhone, arka plandaki uygulamaları
+          uykuya alır; uyuyan Rawen sizi koruyamaz. Bunu önlemek için düşük hassasiyetli bir konum
+          oturumu açık tutulur. <strong>Bu oturumda konumunuz kaydedilmez</strong> — yalnızca
+          uygulamanın uyanık kalmasını sağlar. Bu nedenle iOS ekranın üstünde konum göstergesi
+          gösterebilir.</li>
+      </ul>
+      <p><strong>Ne yapmıyoruz:</strong> hareketlerinizin geçmişini tutmuyor, gün içinde nereye
+      gittiğinizi kaydetmiyor, konumunuzu reklam, profil çıkarma veya analiz amacıyla kullanmıyor
+      ve hiçbir üçüncü tarafla paylaşmıyoruz.</p>
+      <p><strong>İstisna — Outdoor/Kamp modu:</strong> Bu modu <em>siz</em> açarsanız, doğada
+      kaybolma ihtimaline karşı rotanız kaydedilir ve uygulama içindeki haritada gösterilir. Modu
+      kapattığınızda kayıt durur.</p>
+      <p>Şarj tüketimini azaltmak isterseniz uygulama içinden <strong>Ayarlar &gt; Pil Tasarrufu
+      Modu</strong>'nu açabilirsiniz; o zaman uyanık tutucu çalışmaz, buna karşılık uygulama
+      kapalıyken koruma zayıflar.</p></li>
     <li><strong>Bildirimler:</strong> Güvenlik uyarıları ve alarmlar hayati olduğundan bildirimlerin
       açık olması gerekir.</li>
     <li><strong>Sağlık (isteğe bağlı):</strong> Akıllı saatinizden nabız/oksijen okumak istersen.</li>
