@@ -51,7 +51,7 @@
 <div class="wrap">
 
   <h1>Gizlilik Politikası</h1>
-  <p class="updated">Son güncelleme: 23 Temmuz 2026</p>
+  <p class="updated">Son güncelleme: 24 Temmuz 2026</p>
 
   <div class="intro">
     <p style="margin:0">Rawen, yalnız yaşayan insanların güvenliği için tasarlanmış bir
@@ -65,8 +65,14 @@
   <table>
     <tr><th>Veri</th><th>Amaç</th></tr>
     <tr><td><strong>Ad ve e-posta</strong></td><td>Hesap oluşturma ve giriş.</td></tr>
+    <tr><td><strong>Doğum yılınız</strong></td><td>İki iş için: acil durumda telefonunuzun
+      ekranında sağlık görevlisine yaşınızı göstermek ve uygulamanın 13 yaş sınırını
+      uygulamak. <strong>Tam doğum tarihiniz (gün/ay) istenmez.</strong></td></tr>
     <tr><td><strong>Telefon numaranız</strong></td><td>Sizi acil durum kişisi olarak ekleyen
-      yakınlarınızla eşleştirmek için (eşleşme yalnızca telefon numarasıyla yapılır).</td></tr>
+      yakınlarınızın size ulaşabilmesi için. Bir numara aynı anda yalnızca <strong>tek bir
+      Rawen hesabında</strong> kayıtlı olabilir. Koruyucu ilişkisi kurulduktan sonra
+      eşleştirme telefon numarasıyla değil, karşı tarafın <strong>onayladığı hesap
+      bağıyla</strong> yürütülür.</td></tr>
     <tr><td><strong>Acil durum kişileri</strong></td><td>Kaydettiğiniz kişilerin adı ve telefon
       numarası — yalnızca acil durumda onlara haber verebilmek için.</td></tr>
     <tr><td><strong>Konum (GPS)</strong></td><td><strong>(a)</strong> Koruma açıkken
@@ -74,12 +80,14 @@
       güncellenir — telefonunuz kapanır, şarjı biter veya kırılırsa yakınlarınıza sizi nerede
       arayacaklarını söyleyebilmek için. <strong>(b)</strong> Acil durumda anlık konumunuz alınır
       ve 30 dakika boyunca 2 dakikada bir güncellenir. <strong>(c)</strong> Outdoor (doğa) modunu
-      siz açarsanız rotanız kaydedilir. Ayrıntılar için 6. bölüme bakın.</td></tr>
+      siz açarsanız rotanız kaydedilir. Ayrıntılar için 7. bölüme bakın.</td></tr>
     <tr><td><strong>Sağlık verileri</strong> (isteğe bağlı)</td><td>Bir akıllı saat
       bağladığınızda nabız, oksijen ve adım verisi — yalnızca kritik durumları algılayıp sizi
       uyarmak için. Bu özellik tamamen isteğe bağlıdır.</td></tr>
-    <tr><td><strong>Uygulama ayarları</strong></td><td>Pasiflik süresi, bildirim tercihleri,
-      alarm şifresi ve tıbbi kimlik bilgileriniz (kan grubu, ilaçlar vb.).</td></tr>
+    <tr><td><strong>Uygulama ayarları</strong></td><td>Pasiflik süresi, bildirim tercihleri
+      ve tıbbi kimlik bilgileriniz (kan grubu, ilaçlar vb.). <strong>Alarm şifreniz düz metin
+      olarak saklanmaz</strong> — geri çevrilemez şifreli bir özet (hash) olarak tutulur, biz
+      dahil kimse okuyamaz.</td></tr>
   </table>
 
   <div class="note">
@@ -102,10 +110,14 @@
   <h2>3. Verileri Kiminle Paylaşırız</h2>
   <p>Kişisel verileriniz yalnızca aşağıdaki durumlarda paylaşılır:</p>
   <ul>
-    <li><strong>Acil durum anında:</strong> Adınız, konumunuz ve (paylaştıysanız) tıbbi
-      bilgileriniz, <strong>yalnızca sizin kaydettiğiniz acil durum kişilerine</strong> anlık
-      bildirim (push) ve uygulama içi bildirim yoluyla iletilir. SMS kanalı ileride
-      eklenebilir; eklendiğinde bu sayfada belirtilecektir.</li>
+    <li><strong>Acil durum anında:</strong> Adınız ve konumunuz, <strong>yalnızca sizin
+      kaydettiğiniz acil durum kişilerine</strong> anlık bildirim (push) ve uygulama içi
+      bildirim yoluyla iletilir. SMS kanalı ileride eklenebilir; eklendiğinde bu sayfada
+      belirtilecektir.</li>
+    <li><strong>Tıbbi kimliğiniz için daha dar bir kural:</strong> Kan grubu, ilaçlar, kronik
+      hastalıklar ve adres en hassas verinizdir. Bunlar yalnızca daveti <strong>kendi
+      hesabından onaylamış</strong> koruyucuya gönderilir. Eklediğiniz ama henüz onaylamamış
+      bir kişiye acil durum bildirimi gider, <strong>tıbbi kimliğiniz gitmez.</strong></li>
     <li><strong>Koruduğunuz kişiler:</strong> Birinin acil durum kişisi olmayı kabul ettiyseniz,
       o kişinin koruma durumu, kendisinden en son ne zaman bilgi geldiği ve telefonunun pil
       seviyesi size gösterilir. Sağlık izlemeyi açtıysa nabız/adım verisi de görünür. Aynısı
@@ -125,13 +137,31 @@
   <p>Bunun dışında verileriniz <strong>hiçbir üçüncü tarafla paylaşılmaz, satılmaz veya
   kiralanmaz.</strong></p>
 
-  <h2>4. Verilerin Saklanması ve Güvenliği</h2>
+  <h2>4. Hesap Güvenliği</h2>
+  <p>Rawen'de birini acil durum kişisi olarak eklemek, ona konumunuza ve sağlık
+  bilgilerinize erişim hakkı vermek demektir. Bu hakkın kötüye kullanılmaması için:</p>
+  <ul>
+    <li><strong>E-posta doğrulaması:</strong> E-posta ve şifreyle açılan hesaplar, adresinize
+      gönderilen aktivasyon bağlantısına tıklanmadan kullanılamaz. Böylece doğrulanmamış
+      adreslerle toplu sahte hesap açılması zorlaşır. Google veya Apple ile giriş
+      yapıyorsanız kimliğiniz zaten bu sağlayıcılar tarafından doğrulandığı için ayrıca
+      e-posta doğrulaması istenmez.</li>
+    <li><strong>Numara tekilliği:</strong> Bir telefon numarası aynı anda yalnızca tek bir
+      Rawen hesabında kayıtlı olabilir.</li>
+    <li><strong>Karşılıklı onay:</strong> Birinin sizi koruyabilmesi ve durumunuzu
+      görebilmesi için daveti kendi hesabından onaylaması gerekir. Onay vermeyen bir kişi
+      sizi "Koruduklarım" listesinde göremez.</li>
+    <li><strong>Alarm şifresi:</strong> Kolay tahmin edilen şifreler (1234, 0000 gibi) kabul
+      edilmez ve şifre düz metin olarak saklanmaz.</li>
+  </ul>
+
+  <h2>5. Verilerin Saklanması ve Güvenliği</h2>
   <p>Verileriniz Google Firebase altyapısında saklanır ve aktarım sırasında şifrelenir (HTTPS/TLS).
   Erişim kuralları ile her kullanıcının verisi yalnızca kendi hesabından erişilebilir olacak
   şekilde yalıtılmıştır. Acil durum verileri yalnızca ilgili olay için ve yalnızca sizin seçtiğiniz
   kişilerle paylaşılır.</p>
 
-  <h2>5. Haklarınız</h2>
+  <h2>6. Haklarınız</h2>
   <ul>
     <li>Hesabınızı ve tüm verilerinizi istediğiniz zaman <strong>silebilirsiniz.</strong></li>
     <li>Konum, sağlık ve rehber izinlerini cihaz ayarlarından istediğiniz zaman kapatabilirsiniz.</li>
@@ -139,7 +169,7 @@
     <li>Bize her zaman ulaşıp gizlilikle ilgili taleplerde bulunabilirsiniz.</li>
   </ul>
 
-  <h2>6. İzinler Neden Gerekli</h2>
+  <h2>7. İzinler Neden Gerekli</h2>
   <ul>
     <li><strong>Konum ("Her Zaman" erişimi):</strong> Rawen konum iznini <strong>iki ayrı iş</strong>
       için kullanır; ikisini de açıkça anlatmak istiyoruz.
@@ -170,14 +200,16 @@
       seçtiğiniz kişi aktarılır.</li>
   </ul>
 
-  <h2>7. Çocukların Gizliliği</h2>
-  <p>Rawen 13 yaşından küçük çocuklara yönelik değildir ve bu yaş grubundan bilerek veri toplamaz.</p>
+  <h2>8. Çocukların Gizliliği</h2>
+  <p>Rawen 13 yaşından küçük çocuklara yönelik değildir ve bu yaş grubundan bilerek veri
+  toplamaz. Bu sınır kayıt sırasında <strong>uygulanır</strong>: doğum yılınız sorulur ve
+  13 yaşından küçük olduğunuz anlaşılırsa hesap oluşturulmaz.</p>
 
-  <h2>8. Değişiklikler</h2>
+  <h2>9. Değişiklikler</h2>
   <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde uygulama üzerinden sizi
   bilgilendiririz. Güncel sürüm her zaman bu sayfada yayınlanır.</p>
 
-  <h2>9. İletişim</h2>
+  <h2>10. İletişim</h2>
   <p>Gizlilik politikası veya verilerinizle ilgili her türlü soru ve talep için:</p>
   <p><strong>E-posta:</strong> <a href="mailto:rawener.io@gmail.com">rawener.io@gmail.com</a></p>
 
