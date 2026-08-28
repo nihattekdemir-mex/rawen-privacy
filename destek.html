@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rawen — Destek</title>
+<style>
+  :root{
+    --teal:#15646A; --coral:#C15437; --ink:#222; --soft:#6b6b6b;
+    --cream:#FBF4EA; --rule:#e6d6ca; --card:#fff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:17px;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px 80px}
+  header{
+    background:var(--teal); color:#fff; text-align:center;
+    padding:44px 20px 40px; margin-bottom:8px;
+  }
+  header .logo{font-size:34px; font-weight:800; letter-spacing:6px; margin:0}
+  header .sub{color:#cfe6e6; margin:6px 0 0; font-size:15px; letter-spacing:2px}
+  h1{font-size:26px; color:var(--teal); margin:34px 0 4px}
+  .updated{color:var(--soft); font-size:14px; margin:0 0 8px}
+  h2{font-size:20px; color:var(--coral); margin:34px 0 10px; padding-top:8px;
+     border-top:1px solid var(--rule)}
+  h3{font-size:17px; color:var(--teal); margin:22px 0 4px}
+  p{margin:12px 0}
+  ul,ol{margin:12px 0; padding-left:22px}
+  li{margin:8px 0}
+  strong{color:var(--ink)}
+  .intro{background:var(--card); border-left:5px solid var(--teal);
+    border-radius:12px; padding:16px 20px; margin:22px 0; box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .note{background:#fff6f0; border-left:5px solid var(--coral);
+    border-radius:12px; padding:14px 18px; margin:18px 0; font-size:16px}
+  a{color:var(--teal)}
+  .mail{display:inline-block; background:var(--teal); color:#fff; text-decoration:none;
+    padding:12px 22px; border-radius:10px; font-weight:600; margin:6px 0}
+  footer{text-align:center; color:var(--soft); font-size:14px; margin-top:50px;
+    padding-top:24px; border-top:1px solid var(--rule)}
+  @media (max-width:520px){ body{font-size:16px} header .logo{font-size:28px} }
+</style>
+</head>
+<body>
+<header>
+  <p class="logo">RAWEN</p>
+  <p class="sub">GÖRÜNMEZ GÜVENLİK AĞI</p>
+</header>
+<div class="wrap">
+
+  <h1>Destek</h1>
+  <p class="updated">Son güncelleme: 28 Ağustos 2026</p>
+
+  <div class="intro">
+    <p>Bir sorun mu var, bir sorunuz mu? Aşağıda en sık karşılaşılan durumlar
+    ve çözümleri var. Aradığınızı bulamazsanız bize yazın — Rawen bir güvenlik
+    uygulaması, sorularınızı ciddiye alıyoruz.</p>
+    <p style="margin-bottom:0">
+      <a class="mail" href="mailto:rawendestek@gmail.com">rawendestek@gmail.com</a>
+    </p>
+  </div>
+
+  <h2>Sıkça Sorulan Sorular</h2>
+
+  <h3>Koruma açık ama hiçbir şey olmuyor. Çalışıyor mu?</h3>
+  <p>Evet — Rawen'in çalışırken sessiz olması normaldir. Siz telefonunuzu
+  kullandığınız sürece hiçbir uyarı görmezsiniz. Emin olmak isterseniz
+  menüden <strong>Tatbikat Yap</strong>'a dokunun: acil durum kişilerinize
+  "bu bir tatbikattır" işaretli bir bildirim gider ve zincirin çalıştığını
+  görmüş olursunuz.</p>
+
+  <h3>Yürürken "hareket yok" uyarısı aldım</h3>
+  <p>En sık sebebi konum izninin <strong>"Her Zaman"</strong> yerine
+  "Uygulamayı kullanırken" seçilmiş olmasıdır. Bu durumda Rawen arka planda
+  sizi göremez. iPhone'da: Ayarlar → Rawen → Konum → Her Zaman.</p>
+  <p>Uygulamayı görev değiştiriciden yukarı kaydırıp kapattıysanız da aynı
+  şey olur — kapatılan bir uygulamaya işletim sistemi hiçbir bilgi vermez.
+  Rawen bu durumda size "koruma askıda" bildirimi gönderir.</p>
+
+  <h3>Yakınım bildirimleri almıyor</h3>
+  <p>Acil Durum Kişileri ekranında o kişinin altında yeşil
+  <strong>"Onayladı — korumaya hazır"</strong> yazmalı. Turuncu "Onay
+  bekliyor" görünüyorsa davet henüz kabul edilmemiştir; "Tekrar sor"a
+  dokunabilirsiniz. Karşı tarafın da Rawen'i kurmuş ve bildirimlere izin
+  vermiş olması gerekir.</p>
+
+  <h3>Alarm şifremi unuttum</h3>
+  <p>Şifre telefonunuzda ve sunucuda şifrelenmiş olarak saklanır; kimse
+  (biz dahil) okuyamaz. Ayarlar → Alarm Şifresi → <strong>Değiştir</strong>
+  ile yenisini belirleyebilirsiniz.</p>
+
+  <h3>Tatile çıkıyorum, korumayı kapatacağım</h3>
+  <p>Ayarlar → <strong>Koruma Kapalı Hatırlatması</strong> bölümünden 2 saat
+  ile 2 gün arasında bir süre seçin. Seçtiğiniz süreden önce size hiçbir
+  hatırlatma gitmez.</p>
+
+  <h3>Uygulama pil tüketiyor mu?</h3>
+  <p>Rawen sürekli GPS kullanmaz. Konumunuzu yalnızca acil durumda ve
+  Outdoor modunda kaydeder; günlük kullanımda telefonun zaten ürettiği
+  sinyalleri (adım, ekran açılışı) okur.</p>
+
+  <h2>Hesabınızı Silmek</h2>
+  <p>Hesabınızı ve tüm verilerinizi kalıcı olarak silmek isterseniz
+  uygulamada <strong>Menü → Hesabım → Hesabımı Sil</strong> adımlarını
+  izleyin. İşlem geri alınamaz.</p>
+  <div class="note">
+    <p style="margin:0"><strong>Silinince ne olur?</strong> Profiliniz, acil
+    durum kişileriniz, sağlık bilgileriniz, mesajlarınız ve aktivite
+    kayıtlarınız sunucudan kaldırılır. Sizi koruyucu olarak ekleyen kişilerin
+    listesinde bağınız kopar ve o kişilere haber verilir — güvenlik
+    ağlarında sessiz bir boşluk kalmasın diye.</p>
+  </div>
+  <p>Uygulamaya erişemiyorsanız
+  <a href="mailto:rawendestek@gmail.com?subject=Hesap%20silme%20talebi">bize yazın</a>;
+  kimliğinizi doğruladıktan sonra hesabınızı biz sileriz.</p>
+
+  <h2>Acil Bir Durumdaysanız</h2>
+  <div class="note">
+    <p style="margin:0">Rawen bir tıbbi cihaz değildir ve acil yardım
+    hizmetinin yerini tutmaz. Hayati tehlike varsa <strong>112</strong>'yi
+    arayın.</p>
+  </div>
+
+  <h2>Bize Ulaşın</h2>
+  <p>Sorularınız, hata bildirimleri ve önerileriniz için:</p>
+  <p><a class="mail" href="mailto:rawendestek@gmail.com">rawendestek@gmail.com</a></p>
+  <p>Genellikle birkaç iş günü içinde yanıt veriyoruz. Bir hata bildiriyorsanız
+  telefon modelinizi ve ne yaptığınızda olduğunu yazarsanız çok yardımcı olur.</p>
+
+  <p><a href="./">Gizlilik Politikası</a></p>
+
+  <footer>
+    <p>Rawen — Görünmez Güvenlik Ağı</p>
+  </footer>
+</div>
+</body>
+</html>
