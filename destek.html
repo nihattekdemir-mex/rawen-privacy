@@ -26,7 +26,7 @@
   .updated{color:var(--soft); font-size:14px; margin:0 0 8px}
   h2{font-size:20px; color:var(--coral); margin:34px 0 10px; padding-top:8px;
      border-top:1px solid var(--rule)}
-  h3{font-size:17px; color:var(--teal); margin:22px 0 4px}
+  h3{font-size:17.5px; color:var(--teal); margin:26px 0 4px}
   p{margin:12px 0}
   ul,ol{margin:12px 0; padding-left:22px}
   li{margin:8px 0}
@@ -38,9 +38,12 @@
   a{color:var(--teal)}
   .mail{display:inline-block; background:var(--teal); color:#fff; text-decoration:none;
     padding:12px 22px; border-radius:10px; font-weight:600; margin:6px 0}
+  .yol{background:#eef4f4; border-radius:6px; padding:2px 8px;
+    font-size:15.5px; white-space:nowrap; display:inline-block}
   footer{text-align:center; color:var(--soft); font-size:14px; margin-top:50px;
     padding-top:24px; border-top:1px solid var(--rule)}
-  @media (max-width:520px){ body{font-size:16px} header .logo{font-size:28px} }
+  @media (max-width:520px){ body{font-size:16px} header .logo{font-size:28px}
+    .yol{white-space:normal} }
 </style>
 </head>
 <body>
@@ -61,49 +64,129 @@
     </p>
   </div>
 
-  <h2>Sıkça Sorulan Sorular</h2>
+  <h2>Koruma çalışıyor mu?</h2>
 
-  <h3>Koruma açık ama hiçbir şey olmuyor. Çalışıyor mu?</h3>
-  <p>Evet — Rawen'in çalışırken sessiz olması normaldir. Siz telefonunuzu
-  kullandığınız sürece hiçbir uyarı görmezsiniz. Emin olmak isterseniz
-  menüden <strong>Tatbikat Yap</strong>'a dokunun: acil durum kişilerinize
-  "bu bir tatbikattır" işaretli bir bildirim gider ve zincirin çalıştığını
-  görmüş olursunuz.</p>
+  <h3>Koruma açık ama hiçbir şey olmuyor</h3>
+  <p>Bu normaldir. Rawen çalışırken sessizdir — telefonunuzu kullandığınız
+  sürece hiçbir uyarı görmezsiniz. Emin olmak için menüden
+  <span class="yol">Tatbikat Yap</span>'a dokunun: acil durum kişilerinize
+  "bu bir tatbikattır" işaretli bir bildirim gider ve zincirin baştan sona
+  çalıştığını görürsünüz.</p>
 
-  <h3>Yürürken "hareket yok" uyarısı aldım</h3>
-  <p>En sık sebebi konum izninin <strong>"Her Zaman"</strong> yerine
-  "Uygulamayı kullanırken" seçilmiş olmasıdır. Bu durumda Rawen arka planda
-  sizi göremez. iPhone'da: Ayarlar → Rawen → Konum → Her Zaman.</p>
+  <h3>Hareket ettiğim hâlde "İyi misin?" bildirimi geliyor</h3>
+  <p>Rawen adımlarınızı göremiyor demektir. Sırayla kontrol edin:</p>
+  <ul>
+    <li><strong>Fiziksel aktivite izni</strong> — iPhone'da
+      <span class="yol">Ayarlar → Gizlilik → Hareket ve Fitness</span></li>
+    <li><strong>Konum izni "Her Zaman" olmalı</strong> — "Uygulamayı
+      kullanırken" seçiliyse Rawen arka planda sizi göremez</li>
+    <li><strong>Düşük Güç Modu kapalı olmalı</strong> — açıkken iOS arka
+      plan işlerini kısar</li>
+  </ul>
   <p>Uygulamayı görev değiştiriciden yukarı kaydırıp kapattıysanız da aynı
-  şey olur — kapatılan bir uygulamaya işletim sistemi hiçbir bilgi vermez.
-  Rawen bu durumda size "koruma askıda" bildirimi gönderir.</p>
+  şey olur: kapatılmış bir uygulamaya işletim sistemi hiçbir sinyal
+  vermez. Rawen bu durumda size "koruma askıda" bildirimi gönderir.
+  Uygulamayı kapatmayın, arka planda bırakın.</p>
 
-  <h3>Yakınım bildirimleri almıyor</h3>
-  <p>Acil Durum Kişileri ekranında o kişinin altında yeşil
-  <strong>"Onayladı — korumaya hazır"</strong> yazmalı. Turuncu "Onay
-  bekliyor" görünüyorsa davet henüz kabul edilmemiştir; "Tekrar sor"a
-  dokunabilirsiniz. Karşı tarafın da Rawen'i kurmuş ve bildirimlere izin
-  vermiş olması gerekir.</p>
+  <h3>Android'de koruma kendiliğinden duruyor</h3>
+  <p>Telefon Rawen'i uyutuyor. Pil optimizasyonundan Rawen'i çıkarın.
+  Samsung'da ayrıca <span class="yol">Ayarlar → Pil → Arka plan kullanım
+  sınırları</span> altındaki "Uyuyan uygulamalar" listesinde Rawen'in
+  <em>olmadığından</em> emin olun. Xiaomi ve Huawei telefonlarda da benzer
+  bir güç yöneticisi vardır.</p>
 
-  <h3>Alarm şifremi unuttum</h3>
-  <p>Şifre telefonunuzda ve sunucuda şifrelenmiş olarak saklanır; kimse
-  (biz dahil) okuyamaz. Ayarlar → Alarm Şifresi → <strong>Değiştir</strong>
-  ile yenisini belirleyebilirsiniz.</p>
+  <h3>Telefonum kapanırsa koruma biter mi?</h3>
+  <p>Hayır. Koruma açıkken sunucuya bir "son teslim tarihi" yazılır.
+  Telefonunuz kapansa, şarjı bitse, uygulama silinse bile o tarih
+  geçtiğinde <strong>sunucu acil durumu kendisi tetikler</strong> ve
+  yakınlarınıza haber verir.</p>
+
+  <h2>Uyarılar ve alarm</h2>
+
+  <h3>Alarm çaldı ama telefonum ses çıkarmadı</h3>
+  <p>Üç durumda alarm sessiz kalabilir:</p>
+  <ul>
+    <li><strong>Telefon sessiz moddaysa</strong> — yalnızca titreşim olur</li>
+    <li><strong>Akıllı saatiniz takılıysa</strong> — telefon zili açık olsa
+      bile ses çıkmaz; uyarı saate gider ve bileğiniz titrer. Bu Rawen'e
+      özgü değildir, tüm bildirimler böyle davranır</li>
+    <li><strong>Rahatsız Etmeyin</strong> açıksa</li>
+  </ul>
+  <div class="note">
+    <p style="margin:0">Bu önemli, çünkü alarmın ikinci bir işi daha var:
+    <strong>yanınızdakileri duyurmak.</strong> Evde biri varsa, komşu
+    duyacaksa ya da sizi bulan kişi sesi takip edecekse telefondan ses
+    gerekir. Koruma en çok gerektiğinde alarmın sessiz kalabileceğini
+    bilerek kullanın.</p>
+  </div>
+
+  <h3>Yakınım uyarıyı almadı</h3>
+  <p>İki şeyi kontrol edin:</p>
+  <ul>
+    <li><strong>Rawen kurulu mu?</strong> Uyarılar Rawen kurulu telefonlara
+      gider. Acil durum kişinizde uygulama yoksa uyarıyı alamaz.</li>
+    <li><strong>Daveti onayladı mı?</strong> Acil Durum Kişileri ekranında
+      adının altında yeşil <strong>"Onayladı — korumaya hazır"</strong>
+      yazmalı. Turuncu "Onay bekliyor" görünüyorsa "Tekrar sor"a dokunun.</li>
+  </ul>
+
+  <h3>Yanlış alarm verdi, ne yapmalıyım?</h3>
+  <p>Panik yok. Uygulamayı açıp alarm şifrenizi girin. Yakınlarınıza
+  "iyiyim — yanlış alarmdı" bildirimi gider ve endişeleri bir dakika
+  içinde biter.</p>
 
   <h3>Tatile çıkıyorum, korumayı kapatacağım</h3>
-  <p>Ayarlar → <strong>Koruma Kapalı Hatırlatması</strong> bölümünden 2 saat
-  ile 2 gün arasında bir süre seçin. Seçtiğiniz süreden önce size hiçbir
-  hatırlatma gitmez.</p>
+  <p><span class="yol">Ayarlar → Koruma Kapalı Hatırlatması</span>
+  bölümünden 2 saat ile 2 gün arasında bir süre seçin. Seçtiğiniz süreden
+  önce size hiçbir hatırlatma gitmez.</p>
 
-  <h3>Uygulama pil tüketiyor mu?</h3>
-  <p>Rawen sürekli GPS kullanmaz. Konumunuzu yalnızca acil durumda ve
-  Outdoor modunda kaydeder; günlük kullanımda telefonun zaten ürettiği
-  sinyalleri (adım, ekran açılışı) okur.</p>
+  <h2>Hesap ve kurulum</h2>
+
+  <h3>Onay e-postası gelmedi</h3>
+  <p>Önce <strong>Spam / Gereksiz</strong> klasörüne bakın — ilk mektuplar
+  sık sık oraya düşer. Bir dakika bekleyip "Bağlantıyı tekrar gönder"e
+  dokunabilirsiniz.</p>
+
+  <h3>Telefon numaramı kaydedemiyorum</h3>
+  <p>Bir numara yalnızca <strong>tek bir Rawen hesabında</strong> kayıtlı
+  olabilir. Numara başka bir hesapta kayıtlıysa önce oradan kaldırmanız
+  gerekir. Bu kural, başkasının numarasını kendi hesabına yazıp onun
+  uyarılarını ele geçirmesini engeller.</p>
+
+  <h3>Alarm şifremi unuttum</h3>
+  <p>Şifreniz kimsenin okuyamayacağı şekilde saklanır; biz de göremeyiz.
+  <span class="yol">Ayarlar → Alarm Şifresi → Değiştir</span> ile yenisini
+  belirleyebilirsiniz. Bunu alarm çalmadan önce yapın — alarm çalarken
+  ayarlara girmek zordur.</p>
+
+  <h3>"Koruduklarım" listem boş görünüyor</h3>
+  <p>Bu bir arıza değil. O liste <em>sizi</em> ekleyenleri gösterir. Birini
+  acil durum kişiniz yapmanız, sizin de onun acil durum kişisi olduğunuz
+  anlamına gelmez — karşılıklı koruma için ikinizin de birbirini eklemesi
+  gerekir.</p>
+
+  <h3>Akıllı saat şart mı?</h3>
+  <p>Hayır. Saat varsa nabız ve oksijen de hayat belirtisi sayılır; yoksa
+  Rawen adım, dokunma ve arama verisiyle çalışır. Apple Watch de şart
+  değil — Huawei, Samsung, Xiaomi, Amazfit, Fitbit ve Garmin saatleri
+  Apple Sağlık'a veri yazdığında çalışır.</p>
+
+  <h2>Gizlilik</h2>
+
+  <h3>Rawen beni sürekli takip ediyor mu?</h3>
+  <p>Hayır. Konumunuz yalnızca acil durumda paylaşılır. Normal zamanda
+  hiç kimse — biz dahil — nerede olduğunuzu göremez. Adımlarınız ve nabzınız
+  telefondan çıkmaz; yalnızca "hareket var mı?" sorusuna cevap üretir.</p>
+
+  <h3>Pil tüketir mi?</h3>
+  <p>Rawen sürekli GPS kullanmaz. Konumu yalnızca acil durumda ve Outdoor
+  modunda kaydeder; günlük kullanımda telefonun zaten ürettiği sinyalleri
+  (adım, ekran açılışı) okur.</p>
 
   <h2>Hesabınızı Silmek</h2>
   <p>Hesabınızı ve tüm verilerinizi kalıcı olarak silmek isterseniz
-  uygulamada <strong>Menü → Hesabım → Hesabımı Sil</strong> adımlarını
-  izleyin. İşlem geri alınamaz.</p>
+  uygulamada <span class="yol">Menü → Hesabım → Hesabımı Sil</span>
+  adımlarını izleyin. İşlem geri alınamaz.</p>
   <div class="note">
     <p style="margin:0"><strong>Silinince ne olur?</strong> Profiliniz, acil
     durum kişileriniz, sağlık bilgileriniz, mesajlarınız ve aktivite
@@ -117,16 +200,16 @@
 
   <h2>Acil Bir Durumdaysanız</h2>
   <div class="note">
-    <p style="margin:0">Rawen bir tıbbi cihaz değildir ve acil yardım
-    hizmetinin yerini tutmaz. Hayati tehlike varsa <strong>112</strong>'yi
-    arayın.</p>
+    <p style="margin:0">Rawen bir tıbbi cihaz değildir, teşhis koymaz ve
+    acil yardım hizmetinin yerini tutmaz. Hayati tehlike varsa
+    <strong>112</strong>'yi arayın.</p>
   </div>
 
   <h2>Bize Ulaşın</h2>
-  <p>Sorularınız, hata bildirimleri ve önerileriniz için:</p>
   <p><a class="mail" href="mailto:rawendestek@gmail.com">rawendestek@gmail.com</a></p>
-  <p>Genellikle birkaç iş günü içinde yanıt veriyoruz. Bir hata bildiriyorsanız
-  telefon modelinizi ve ne yaptığınızda olduğunu yazarsanız çok yardımcı olur.</p>
+  <p>Genellikle birkaç iş günü içinde yanıt veriyoruz. Bir hata
+  bildiriyorsanız telefon modelinizi ve ne yaptığınızda olduğunu yazmanız
+  çok yardımcı olur.</p>
 
   <p><a href="./">Gizlilik Politikası</a></p>
 
